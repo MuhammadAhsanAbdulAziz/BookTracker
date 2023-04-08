@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_app_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.booktracker.Views.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_createBookFragment"
+            app:destination="@id/createBookFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_viewBookFragment"
+            app:destination="@id/viewBookFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchBookFragment"
+            app:destination="@id/searchBookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.booktracker.Views.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/createBookFragment"
+        android:name="com.example.booktracker.Views.CreateBookFragment"
+        android:label="fragment_create_book"
+        tools:layout="@layout/fragment_create_book" >
+        <action
+            android:id="@+id/action_createBookFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewBookFragment"
+        android:name="com.example.booktracker.Views.ViewBookFragment"
+        android:label="fragment_view_book"
+        tools:layout="@layout/fragment_view_book" >
+        <action
+            android:id="@+id/action_viewBookFragment_to_bookDetailsFragment"
+            app:destination="@id/bookDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchBookFragment"
+        android:name="com.example.booktracker.Views.SearchBookFragment"
+        android:label="fragment_search_book"
+        tools:layout="@layout/fragment_search_book" >
+        <action
+            android:id="@+id/action_searchBookFragment_to_bookDetailsFragment"
+            app:destination="@id/bookDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookDetailsFragment"
+        android:name="com.example.booktracker.Views.BookDetailsFragment"
+        android:label="BookDetailsFragment" >
+        <action
+            android:id="@+id/action_bookDetailsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_bookDetailsFragment_to_bookUpdateFragment"
+            app:destination="@id/bookUpdateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookUpdateFragment"
+        android:name="com.example.booktracker.Views.BookUpdateFragment"
+        android:label="fragment_book_update"
+        tools:layout="@layout/fragment_book_update" >
+        <action
+            android:id="@+id/action_bookUpdateFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+</navigation>

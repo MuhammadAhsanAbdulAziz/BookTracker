@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BookTracker</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="textOfLoginPage_signup"><i>Don\'t have an account?</i> <u><b>Sign UP</b></u></string>
+    <string name="textOfLoginPage_login"><i>Already have an account?</i> <u><b>Login</b></u></string>
+    <string name="hello_let_s_login_to_your_account">Hello let\'s login to your account</string>
+    <string name="hello_let_s_signup_to_your_account">Hello let\'s signup to your account</string>
+</resources>

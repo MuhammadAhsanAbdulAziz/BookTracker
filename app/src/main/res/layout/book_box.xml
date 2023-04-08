@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="BookInterface"
+            type="com.example.booktracker.interfaces.BookInterface" />
+        <variable
+            name="book"
+            type="com.example.booktracker.model.BookModel" />
+
+    </data>
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:onClick="@{()->BookInterface.BookDetail(book)}"
+            android:layout_margin="15sp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/viewBook"
+            android:layout_width="170sp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20sp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/bookimg"
+                    android:layout_width="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img"
+                    android:layout_height="150dp"/>
+
+                <TextView
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@{book.title}"
+                    android:textAlignment="center"
+                    android:textColor="@color/myThemeDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+<!--        <ImageView-->
+<!--            android:src="@drawable/ic_launcher_background"-->
+<!--            android:layout_width="80dp"-->
+<!--            android:layout_height="80dp" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="@{category.name}" />-->
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Views.ViewBookFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="9"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="All Books"
+            android:textColor="@color/myThemeDark"
+            android:fontFamily="@font/poppins_bolditalic"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        <ImageButton
+            android:id="@+id/filterbtn"
+            android:layout_width="0dp"
+            android:background="@drawable/button_seven"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_filter_alt_24"/>
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/filterrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="Sort by : "/>
+        <Button
+            android:id="@+id/titlebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/myThemeDark"
+            android:layout_marginHorizontal="5dp"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:text="Title"/>
+        <Button
+            android:id="@+id/authorbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:backgroundTint="@color/myThemeDark"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:text="Author"/>
+        <Button
+            android:id="@+id/datebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/myThemeDark"
+            android:layout_marginHorizontal="5dp"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:text="Date"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Booklist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            tools:listitem="@layout/book_box" />
+    </LinearLayout>
+
+</LinearLayout>
